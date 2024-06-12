@@ -14,7 +14,7 @@ router.post("/adminlogin", (req, res) => {
         { role: "admin", email: email },
         "jwt_secret_key",
         { expiresIn: "1d" }
-      );
+      ); 
       res.cookie("token", token);
       return res.json({ loginstatus: true });
     } else {
